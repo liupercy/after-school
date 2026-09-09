@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <title>下課後，再一起走吧。</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<div id="game"></div>
+
+<div class="hud">
+  <div>
+    <div class="gameTitle">下課後，再一起走吧。</div>
+    <div class="mission">放學後・校門</div>
+  </div>
+
+  <div class="time">16:42</div>
+</div>
+
+<div class="chapter">
+  Chapter 1 — 第一次遇見昀婷
+</div>
+
+<!-- 虛擬搖桿 -->
+<div id="joystick">
+  <div id="stick"></div>
+</div>
+
+<!-- 對話按鈕 -->
+<button id="talkButton">
+  對話
+</button>
+
+<!-- 對話框 -->
+<div id="dialogueBox">
+  <div id="speaker">昀婷</div>
+  <div id="dialogueText">
+    欸，你也要回家嗎？
+  </div>
+
+  <div class="hint">
+    點一下繼續
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

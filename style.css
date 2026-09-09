@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #111;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+#game canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* HUD */
+.hud {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 10;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+.gameTitle {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.mission {
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: .7;
+}
+
+.time {
+  font-size: 18px;
+}
+
+.chapter {
+  position: fixed;
+  left: 22px;
+  bottom: 150px;
+  z-index: 10;
+  color: white;
+  font-size: 13px;
+  opacity: .75;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+/* 搖桿 */
+#joystick {
+  position: fixed;
+  left: 28px;
+  bottom: 28px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(10px);
+  z-index: 20;
+  touch-action: none;
+}
+
+#stick {
+  position: absolute;
+  left: 31px;
+  top: 31px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.75);
+  box-shadow: 0 4px 15px rgba(0,0,0,.25);
+  pointer-events: none;
+}
+
+/* 對話按鈕 */
+#talkButton {
+  position: fixed;
+  right: 28px;
+  bottom: 36px;
+  display: none;
+  padding: 14px 24px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 18px;
+  background: rgba(20,20,24,.82);
+  color: white;
+  font-size: 16px;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+/* 對話框 */
+#dialogueBox {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  width: min(86vw, 560px);
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(18,18,22,.9);
+  border: 1px solid rgba(255,255,255,.15);
+  color: white;
+  z-index: 30;
+  display: none;
+  backdrop-filter: blur(12px);
+}
+
+#speaker {
+  color: #71e4d5;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#dialogueText {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.hint {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 11px;
+  opacity: .4;
+}
+#joystick {
+  touch-action: none;
+}
